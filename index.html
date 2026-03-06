@@ -1,111 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ~~~~~~~~~~~~~~google fonts~~~~~~~~~~~~~ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
-    rel="stylesheet">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ~~~~~~~~~~~~~~google fonts~~~~~~~~~~~~~ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tiro+Bangla:ital@0;1&display=swap"
+      rel="stylesheet">
 
     <!-- ~~~~~~~~~~~~~~~~~tailwind and deisy ui cdn~~~~~~~~~~~~~~~~ -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- ~~~~~~~~~~~~~~~~~~~font awsome cdn~~~~~~~~~~~~~~~~~ -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
     <!-- ~~~~~~~~~fav icon~~~~~~~~~~~~~~ -->
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
 
     <!-- ~~~~~~~~~~~css link~~~~~~~~~~~~~~~~ -->
-     <link rel="stylesheet" href="./style/style.css">
-  <title>English জানালা</title>
-</head>
-<body>
-<header>
-  <!-- ~~~~~~~~~~~~nav bar~~~~~~~~~~~~~ -->
-  <div class="navbar bg-base-100 shadow-sm">
-    <div class="navbar-start">
-      
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
-          </svg>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>English জানালা</title>
+  </head>
+
+  <body>
+    <!-- ~~~~~~~~header~~~~~~~~~~ -->
+    <header>
+      <!-- ~~~~~~~~~~~~nav bar~~~~~~~~~~~~~ -->
+      <div class="navbar bg-[#ECF6FE] shadow-sm">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-5 w-50  p-2 shadow">
+              <li>
+                <a href="" class=""><i class="fa-solid fa-circle-question"></i>FAQ</a>
+              </li>
+              <li>
+                <a href="" class=""><i class="fa-solid fa-book-open"></i></i>Learn</a>
+              </li>
+              <li>
+                <a href="" class=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+              </li>
+
+            </ul>
+          </div>
+          <!-- ~~~~~~~nav left icon~~~~~~~~~ -->
+          <a href="#" class="flex items-center gap-1 ">
+            <span class="text-xl font-semibold text-[#18181B]">English</span>
+            <img src="./assets/logo.png" alt="logo">
+            <span class="font-bangla text-xl text-[#000000] font-semibold">জানালা</span>
+          </a>
         </div>
-        <ul tabindex="-1" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-5 w-50  p-2 shadow">
-          <li>
-            <a href="" class=""><i class="fa-solid fa-circle-question"></i>FAQ</a>
-          </li>
-          <li>
-            <a href="" class=""><i class="fa-solid fa-book-open"></i></i>Learn</a>
-          </li>
-          <li>
-            <a href="" class=""><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
-          </li>
-          
-        </ul>
-      </div>
-      
-     
-      <a href="#" class="flex items-center gap-1 ">
-        <span class="text-xl font-semibold text-[#18181B]">English</span>
-        <img src="./assets/logo.png" alt="logo">
-        <span class="font-bangla text-xl text-[#000000] font-semibold">জানালা</span>
-
-      </a>
-    </div>
-    
-    
-    
-    <div class="navbar-end hidden lg:flex">
-      <ul class="menu menu-horizontal space-x-1">
-       <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</a>
-       </li>
-       <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i></i>Learn</a>
-       </li>
-       <li>
-        <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
-       </li>
-      
-      </ul>
-    </div>
-  </div>
-
-</header>
- 
-  
-</body>
-</html>
-
-
-<!-- <div class="navbar bg-base-100 shadow-sm">
-  <div class="navbar-start">
-    
-    <a class="btn btn-ghost text-xl">daisyUI</a>
-  </div>
-  <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2 bg-base-100 w-40 z-1">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
+        <div class="navbar-end hidden lg:flex">
+          <ul class="menu menu-horizontal space-x-1">
+            <li>
+              <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+            </li>
+            <li>
+              <a href="" class="btn btn-outline btn-primary"><i class="fa-solid fa-book-open"></i></i>Learn</a>
+            </li>
+            <li>
+              <a href="" class="btn btn-outline btn-primary"><i
+                  class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a>
+            </li>
           </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
-    </ul>
-  </div>
-  <div class="navbar-end">
-    <a class="btn">Button</a>
-  </div>
-</div> -->
+        </div>
+      </div>
+    </header>
+
+    <!-- ~~~~~~~~~~hero section~~~~~~~~~~~~~ 
+ -->
+    <sectionc class=" w-11/12 mx-auto flex flex-col-reverse md:flex-row gap-10 items-center justify-between py-5">
+      <div class="content flex-1 text-center md:text-left">
+        <h2 class="text-4xl font-bold mb-5"><span class="text-[#00BCFF]">English</span> is Easy!!</h2>
+        <p class="text-2xl leading-8 font-bangla">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons
+          আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+
+        <!-- ~~~~~~~~~~login form~~~~~~~~~~~~ -->
+        <div class="flex justify-center md:justify-start">
+          <fieldset class="fieldset grid  border-base-300 rounded-box w-xs mt-5 p-4 ">
+            <input type="text" class="input" placeholder="Enter your name" />
+
+            <input type="password" class="input" placeholder="Password" />
+
+            <button class="btn btn-outline btn-primary mt-4">Login</button>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="image flex-1">
+        <img src="./assets/hero-student.png" alt="hero_img">
+      </div>
+    </sectionc>
+
+
+  </body>
+
+</html>
