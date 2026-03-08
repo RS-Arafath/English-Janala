@@ -105,12 +105,36 @@
     </sectionc>
 
     <!-- ~~~~~~~learning lavel~~~~~~~~~ -->
-    <section class="w-11/12 mx-auto mt-13 mb-7">
+    <section class="w-11/12 mx-auto mt-13 mb-5">
       <h2 class="text-4xl text-center font-bold mb-5"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h2>
 
       <!-- ~~~~~~lavel btn~~~~~~~~ -->
       <div id="lavel-container" class="flex flex-wrap gap-3 justify-center">
       </div>
+    </section>
+
+    <!-- ~~~~~~~~~~search box~~~~~~~~~~~~~ -->
+    <section class=" flex justify-center w-11/12 mx-auto mb-5">
+      <div class="join">
+        <div>
+          <label class="input validator join-item">
+           
+              <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none" stroke="currentColor">
+                <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+              </g>
+            </svg>
+            <input id="input-search" type="text" placeholder="Search " required />
+          </label>
+          
+        </div>
+        <button id="btn-search" class="btn btn-primary join-item">Search</button>
+      </div>
+    </section>
+
+    <!-- loading spiner -->
+    <section id="spinner" class="hidden flex justify-center items-center py-10">
+      <span class="loading loading-spinner text-primary"></span>
     </section>
 
     <section id="word-container"
@@ -124,9 +148,9 @@
 
     </section>
 
-    <!-- Open the modal using ID.showModal() method -->
-
+   
     <!-- ~~~~~~~~~~modal popup~~~~~~~~~~~~~ -->
+     
     <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
     <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">

@@ -4,6 +4,18 @@ const createElement = (arr) => {
   return htmlElement.join(' ');
 };
 
+//spiner function
+const manageSpinner = (status) => {
+  if (status === true) {
+    document.getElementById('spinner').classList.remove('hidden');
+    document.getElementById('word-container').classList.add('hidden');
+  } else {
+    document.getElementById('spinner').classList.add('hidden');
+    document.getElementById('word-container').classList.remove('hidden');
+  }
+};
+
+//load lesson btn function
 const loadLesson = () => {
   fetch('https://openapi.programming-hero.com/api/levels/all')
     .then((res) => res.json())
@@ -20,6 +32,7 @@ const removeActive = () => {
 
 // ~~~~~~~~~load lavel word function~~~~~~~~~~~~~~
 const loadLevelWord = (id) => {
+  manageSpinner(true);
   const url = `https://openapi.programming-hero.com/api/level/${id}`;
   fetch(url)
     .then((res) => res.json())
@@ -33,6 +46,7 @@ const loadLevelWord = (id) => {
     });
 };
 
+//word details function
 const loadWordDetails = async (id) => {
   const url = `https://openapi.programming-hero.com/api/word/${id}`;
   const res = await fetch(url);
@@ -80,6 +94,7 @@ const displayLevelWord = (words) => {
         <h2 class=" font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl">নেক্সট Lesson এ যান।</h2>
       </div>
     `;
+    manageSpinner(false);
     return;
   }
   //get evevry word
@@ -103,6 +118,7 @@ const displayLevelWord = (words) => {
     `;
     wordContainer.append(card);
   });
+  manageSpinner(false);
 };
 
 const displayLesson = (lessons) => {
@@ -127,3 +143,19 @@ const displayLesson = (lessons) => {
 };
 
 loadLesson();
+
+document.getElementById('btn-search').addEventListener('click', () => {
+  const input = document.getElementById('input-search');
+  const searchValue = input.value.trim().toLowerCase();
+  console.log(searchValue);
+  fetch('https://openapi.programming-hero.com/api/words/all')
+    .then((res) => res.json())
+    .then((data) => {
+      const allWords = data.data;
+  
+
+      const filterWord = allWords.filter(word => word.word.toLowerCase().includes(searchValue));
+      displayLevelWord(filterWord);
+      
+    });
+});
