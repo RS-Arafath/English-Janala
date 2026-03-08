@@ -113,15 +113,37 @@
       </div>
     </section>
 
-    <section id="word-container" class=" w-11/12 mx-auto bg-gray-100 p-3 md:p-8 grid gap-5 rounded-xl grid-cols-1 sm:grid-cols-2  md:grid-cols-3 2xl:grid-cols-4">
+    <section id="word-container"
+      class=" w-11/12 mx-auto bg-gray-100 p-3 md:p-8 grid gap-5 rounded-xl grid-cols-1 sm:grid-cols-2  md:grid-cols-3 2xl:grid-cols-4">
 
-  <div class="text-center  col-span-full space-y-2">
-    <p class="text-[#79716B] font-light font-bangla text-sm sm:text-base md:text-lg lg:text-xl">আপনি এখনো কোন Lesson
-      Select করেন নি</p>
-    <h2 class=" font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl">একটি Lesson Select করুন।</h2>
-  </div>
+      <div class="text-center  col-span-full space-y-2">
+        <p class="text-[#79716B] font-light font-bangla text-sm sm:text-base md:text-lg lg:text-xl">আপনি এখনো কোন Lesson
+          Select করেন নি</p>
+        <h2 class=" font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl">একটি Lesson Select করুন।</h2>
+      </div>
 
     </section>
+
+    <!-- Open the modal using ID.showModal() method -->
+
+    <!-- ~~~~~~~~~~modal popup~~~~~~~~~~~~~ -->
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+      <div class="modal-box">
+
+        <div id="details-container" class="space-y-4">
+          //details word render here
+
+
+        </div>
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn bg-[#422AD5] text-white">Complete Learning</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
 
     <!-- ~~~~~~~~~~~~~~js link~~~~~~~~~~~~~ -->
     <script src="script/index.js"></script>
