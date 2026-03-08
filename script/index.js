@@ -1,3 +1,11 @@
+
+//text to spech
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = 'en-EN'; // English
+  window.speechSynthesis.speak(utterance);
+}
+
 //find synonyms function
 const createElement = (arr) => {
   const htmlElement = arr.map((el) => `<span class="btn">${el}</span>`);
@@ -112,7 +120,7 @@ const displayLevelWord = (words) => {
           <button onclick="loadWordDetails(${word.id})" class="btn bg-[#ECF6FE] hover:bg-[#aad3f5] duration-300 text-lg py-0 px-3"><i class="fa-solid fa-circle-info"></i></button>
 
           
-          <button class="btn bg-[#ECF6FE]  hover:bg-[#aad3f5] duration-300 text-lg py-0 px-3"><i class="fa-solid fa-volume-high"></i></button>
+          <button onclick="pronounceWord('${word.word}')" class="btn bg-[#ECF6FE]  hover:bg-[#aad3f5] duration-300 text-lg py-0 px-3"><i class="fa-solid fa-volume-high"></i></button>
         </div>
       </div>
     `;
@@ -145,6 +153,7 @@ const displayLesson = (lessons) => {
 loadLesson();
 
 document.getElementById('btn-search').addEventListener('click', () => {
+  removeActive();
   const input = document.getElementById('input-search');
   const searchValue = input.value.trim().toLowerCase();
   console.log(searchValue);
